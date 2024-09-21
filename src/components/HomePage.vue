@@ -7,7 +7,7 @@
         </div>
       </v-col>
       <v-col cols="12" class="py-0 mt-5">
-        <div class="text4 ">How did we do?</div>
+        <div class="text4">How did we do?</div>
       </v-col>
       <v-col cols="12" class="py-0 pt-3">
         <div class="text5">
@@ -37,12 +37,7 @@
       </v-col>
 
       <v-col cols="12">
-        <v-btn
-          block
-          rounded="xl"
-          class="btn"
-          :disabled="selectedRating === null"
-          @click="submitRating"
+        <v-btn block rounded="xl" class="btn" @click="submitRating"
           >Submit</v-btn
         >
       </v-col>
@@ -68,7 +63,9 @@
                   </div>
                 </v-chip>
               </v-col>
-              <v-col cols="12" class="text-h5 text-center text2">Thank you!</v-col>
+              <v-col cols="12" class="text-h5 text-center text2"
+                >Thank you!</v-col
+              >
               <v-col cols="12" class="text3 px-1"
                 >We appreciate you taking time to give a rating. If you ever
                 need more support, don't hesitate to get in touch!</v-col
@@ -76,10 +73,6 @@
             </v-row>
           </v-container>
         </v-card-text>
-        <!-- <v-card-actions>
-          <v-spacer></v-spacer>
-          <v-btn @click="closeDialog">Close</v-btn>
-        </v-card-actions> -->
       </v-card>
     </v-dialog>
   </v-container>
@@ -105,6 +98,8 @@ const submitRating = () => {
     if (selectedRating.value !== null) {
       dialog.value = true; // Open dialog
     }
+  } else {
+    alert("Choose a rating!!!");
   }
 };
 
@@ -207,16 +202,6 @@ i.mdi {
 }
 
 /* Custom disabled styles */
-.btn:disabled {
-  opacity: 1; /* Keeps the original color without graying out */
-  background-color: hsl(25, 97%, 53%); /* Keep original background */
-  color: hsl(43, 60%, 7%);
-  cursor: not-allowed; /* Show "not-allowed" cursor when disabled */
-}
-
-.btn:disabled:hover {
-  background-color: hsl(25, 97%, 53%); /* No hover effect when disabled */
-}
 
 .img3 {
   width: 50%;

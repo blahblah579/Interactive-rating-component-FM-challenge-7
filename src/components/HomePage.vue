@@ -201,7 +201,7 @@ i.mdi {
   color: black;
 }
 
-/* Custom disabled styles */
+/* second */
 
 .img3 {
   width: 50%;
